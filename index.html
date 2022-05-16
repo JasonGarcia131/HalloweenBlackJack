@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Black JACK-O-LANTER</title>
+    </style>
+</head>
+<body>
+    <nav id="home-navigation">
+        <ul>
+            <li>
+                <h2>BLACK JACK</h2>
+            </li>
+            <li>
+               <img src="./img/START.png" id = 'startButton' alt = 'image of tombstone with the word start.' role = 'clickable image to start the game.' onclick = 'hideHomepage()'/>
+            </li>
+            <li>
+                <a id = 'rulesLink' href="rulesPage.html">Rules</a>
+            </li>
+        </ul>
+    </nav>
+        <div id="gameContainer">
+            <div class="CardContainer">
+                <div class='cards' id = 'dealersCard1'></div>
+                <div class='cards' id = 'dealersCard2'></div>
+                <div class='cards' id = 'dealersCard3'></div>
+                <div class='cards' id = 'dealersCard4'></div>
+                <div class='cards' id = 'dealersCard5'></div>
+            </div>
+            <div id="messagePopUp">
+                <p id = 'winLoseMessage'>message</p>
+                <button class = 'popUpButton' id = 'tryAgain' class = 'playerOptionButton' aria-label=" Play again button" onclick = 'reset()'>Play Again</button>
+                <button class = 'popUpButton' id = 'exit' aria-label=" Exit game button" class = 'playerOptionButton' onclick = 'returnHome()'>Exit</button>
+            </div>
+            <div class="CardContainer">
+                <div class = 'cards' id= 'playersCard1'></div>
+                <div class = 'cards' id= 'playersCard2'></div>
+                <div class = 'cards' id= 'playersCard3'></div>
+                <div class = 'cards' id= 'playersCard4'></div>
+                <div class = 'cards' id= 'playersCard5'></div>
+            </div>
+            <div id = 'controls'>
+                <button id = 'hitButton' class = 'playerOptionButton' aria-label = 'Hit button' onclick = 'hit()'>HIT</button>
+                <button id = 'stayButton' class = 'playerOptionButton' aria-label = 'Stay button' onclick = 'dealerTurn()'>STAY</button>
+                <h3 id = 'yourHandDisplay'>Your Hand: </h3>
+                <h4 id = 'yourWallet'>Your Wallet: $1000 </h4>
+            </div>
+        </div>        
+    </main>
+    <script src = 'script.js' defer></script>
+</body>
+</html>
