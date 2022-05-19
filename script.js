@@ -1,170 +1,170 @@
 let deckObject = [
-    // {   
-    //    // name: 'ace',
-    //     img: './img/aceSpiders.png',
-    //     value: 1
+    {   
+       // name: 'ace',
+        img: './img/oneSpiders.png',
+        value: 1
 
-    // },
-    // {
-    //    // name: 'ace',
-    //     img: './img/aceSpiders.png',
-    //     value: 1
-    // },
-    // {
-    //    // name: 'aceSpiders
-    //     img: './img/aceSpiders.png',
-    //     value: 1
-    // },
-    // {
-    //    // name: 'aceSpiders
-    //     img: './img/aceSpiders.png',
-    //     value: 1
-    // }
-    // ,
-    // {
-    //     img: './img/twoSpiders.png',
-    //     value: 2
-    // },
-    // {
-    //     img: './img/twoSpiders.png',
-    //     value: 2
-    // },
-    // {
-    //     img: './img/twoSpiders.png',
-    //     value: 2
-    // },
-    // {
-    //     img: './img/twoSpiders.png',
-    //     value: 2
-    // }//,
+    },
+    {
+       // name: 'ace',
+        img: './img/oneGhost.png',
+        value: 1
+    },
+    {
+       // name: 'oneBat'
+        img: './img/oneBat.png',
+        value: 1
+    },
+    {
+       // name: 'oneGhost
+        img: './img/oneSkull.png',
+        value: 1
+    }
+    ,
+    {
+        img: './img/twoSpiders.png',
+        value: 2
+    },
+    {
+        img: './img/twoGhost.png',
+        value: 2
+    },
+    {
+        img: './img/twoBats.png',
+        value: 2
+    },
+    {
+        img: './img/twoSkulls.png',
+        value: 2
+    },
     {
         img: './img/threeSpiders.png', 
         value: 3
     },
     {
-        img: './img/threeSpiders.png',
+        img: './img/threeGhost.png',
         value: 3
     },
     {
-        img: './img/threeSpiders.png',
+        img: './img/threeBats.png',
         value: 3
     },
     {
-        img: './img/threeSpiders.png',
+        img: './img/threeSkulls.png',
         value: 3
+    },
+    {
+        img: './img/fourSpiders.png',
+        value: 4
+    },
+    {
+        img: './img/fourGhost.png',
+        value: 4
+    },
+    {
+        img: './img/fourBats.png',
+        value: 4
+    },
+    {
+        img: './img/fourSkulls.png',
+        value: 4
+    },
+    {
+        img: './img/fiveSpiders.png',
+        value: 5
+    },
+    {
+        img: './img/fiveGhost.png',
+        value: 5
+    },
+    {
+        img: './img/fiveBats.png',
+        value: 5
+    },
+    {
+        img: './img/fiveSkulls.png',
+        value: 5
+    },
+    {
+        img: './img/sixSpiders.png',
+        value: 6
+    },
+    {
+        img: './img/sixGhost.png',
+        value: 6
+    },
+    {
+        img: './img/sixBats.png',
+        value: 6
+    },
+    {
+        img: './img/sixSkulls.png',
+        value: 6
+    },
+    {
+        img: './img/sevenSpiders.png',
+        value: 7
+    },
+    {
+        img: './img/sevenGhost.png',
+        value: 7
+    },
+    {
+        img: './img/sevenBats.png',
+        value: 7
+    },
+    {
+        img: './img/sevenSkulls.png',
+        value: 7
+    },
+    {
+        img: './img/eightSpiders.png',
+        value: 8
+    },
+    {
+        img: './img/eightGhost.png',
+        value: 8
+    },
+    {
+        img: './img/eightBats.png',
+        value: 8
+    },
+    {
+        img: './img/eightSkulls.png',
+        value: 8
+    },
+    {
+        img: './img/nineSpiders.png',
+        value: 9
+    },
+    {
+        img: './img/nineGhost.png',
+        value: 9
+    },
+    {
+        img: './img/nineBats.png',
+        value: 9
+    },
+    {
+        img: './img/nineSkulls.png',
+        value: 9
+    },
+    {
+        img: './img/tenSpiders.png',
+        value: 10
+    },
+    {
+        img: './img/tenGhost.png',
+        value: 10
+    },
+    {
+        img: './img/tenBats.png',
+        value: 10
+    },
+    {
+        img: './img/tenSkulls.png',
+        value: 10
     }//,
-    // {
-    //     img: './img/fourHearts.png',
-    //     value: 4
-    // },
-    // {
-    //     img: './img/fourDiamonds.png',
-    //     value: 4
-    // },
-    // {
-    //     img: './img/fourClubs.png',
-    //     value: 4
-    // },
-    // {
-    //     img: './img/fourSpades.png',
-    //     value: 4
-    // },
-    // {
-    //     img: './img/fiveHearts.png',
-    //     value: 5
-    // },
-    // {
-    //     img: './img/fiveDiamonds.png',
-    //     value: 5
-    // },
-    // {
-    //     img: './img/fiveClubs.png',
-    //     value: 5
-    // },
-    // {
-    //     img: './img/fiveSpades.png',
-    //     value: 5
-    // },
-    // {
-    //     img: './img/sixHearts.png',
-    //     value: 6
-    // },
-    // {
-    //     img: './img/sixDiamond.png',
-    //     value: 6
-    // },
-    // {
-    //     img: './img/sixClubs.png',
-    //     value: 6
-    // },
-    // {
-    //     img: './img/sixSpades.png',
-    //     value: 6
-    // },
-    // {
-    //     img: './img/sevenHearts.png',
-    //     value: 7
-    // },
-    // {
-    //     img: './img/sevenDiamonds.png',
-    //     value: 7
-    // },
-    // {
-    //     img: './img/sevenClubs.png',
-    //     value: 7
-    // },
-    // {
-    //     img: './img/sevenSpades.png',
-    //     value: 7
-    // },
-    // {
-    //     img: './img/eightHearts.png',
-    //     value: 8
-    // },
-    // {
-    //     img: './img/eightDiamonds.png',
-    //     value: 8
-    // },
-    // {
-    //     img: './img/eightClubs.png',
-    //     value: 8
-    // },
-    // {
-    //     img: './img/eightSpades.png',
-    //     value: 8
-    // },
-    // {
-    //     img: './img/nineHearts.png',
-    //     value: 9
-    // },
-    // {
-    //     img: './img/nineDiamonds.png',
-    //     value: 9
-    // },
-    // {
-    //     img: './img/nineClubs.png',
-    //     value: 9
-    // },
-    // {
-    //     img: './img/nineSpades.png',
-    //     value: 9
-    // },
-    // {
-    //     img: './img/tenHearts.png',
-    //     value: 10
-    // },
-    // {
-    //     img: './img/tenDiamonds.png',
-    //     value: 10
-    // },
-    // {
-    //     img: './img/tenClubs.png',
-    //     value: 10
-    // },
-    // {
-    //     img: './img/tenSpades.png',
-    //     value: 10
-    // },
     // {
     //     img: './img/jHearts.png',
     //     value: 10
