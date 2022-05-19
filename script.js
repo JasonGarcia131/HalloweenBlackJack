@@ -215,6 +215,7 @@ let deckObject = [
     //  }
 ]
 
+//DOM Declarations and Global Variables
 let gameContainer = document.querySelector('#gameContainer')
 let playerCardContainer = document.querySelector('#playerCardContainer');
 let playerCard1 = document.querySelector('#playersCard1'); // playerCard[x] and dealerCard[y] are the div containers that hold the card images
@@ -249,7 +250,7 @@ let dealersTurn = false;
 let continueGame = true;
 
 
-
+//Deals a random card from deckObject 
 function deal(){
     return deckObject[Math.floor(Math.random()*deckObject.length)];
 }
@@ -260,8 +261,9 @@ function updateWallet(playerCash){
 
 }
 
-function check(){
+async function check(){
 
+    //initializes the players hand to 0 to sum the hand.
     playerHandSum = 0;
     dealerHandSum = 0;
 
@@ -312,16 +314,15 @@ function check(){
             playerCash = playerCash - 100;
             updateWallet(playerCash);
             console.log('21 Dealer wins');
-            setTimeout(popUpMessage(`You lose! Your Hand: ${playerHandSum} Dealer Hand: ${dealerHandSum}`, 'red' ), 10000);
+            await setTimeout(popUpMessage(`You lose! Your Hand: ${playerHandSum} Dealer Hand: ${dealerHandSum}`, 'red' ), 10000)//setTimeout(popUpMessage(`You lose! Your Hand: ${playerHandSum} Dealer Hand: ${dealerHandSum}`, 'red' ), 10000);
             return false;
             
-
         }
         else if(dealerHandSum > playerHandSum && dealerHandSum < 21){
             playerCash = playerCash - 100
             updateWallet(playerCash);
             console.log('dealer sum is greater. Dealer wins')
-            setTimeout(popUpMessage(`You lose! Your Hand: ${playerHandSum} Dealer Hand: ${dealerHandSum}`, 'red'), 10000);
+            await setTimeout(popUpMessage(`You lose! Your Hand: ${playerHandSum} Dealer Hand: ${dealerHandSum}`, 'red' ), 10000)//setTimeout(popUpMessage(`You lose! Your Hand: ${playerHandSum} Dealer Hand: ${dealerHandSum}`, 'red'), 10000);
             return false;
             // reset(playerCash);
         }
@@ -329,14 +330,14 @@ function check(){
             playerCash = playerCash + 100
             updateWallet(playerCash);
             console.log('dealer Busted');
-            setTimeout(popUpMessage(`You Win! Your Hand: ${playerHandSum} Dealer Hand: ${dealerHandSum}`,'green'), 10000);
+            await setTimeout(popUpMessage(`You lose! Your Hand: ${playerHandSum} Dealer Hand: ${dealerHandSum}`, 'red' ), 10000)//setTimeout(popUpMessage(`You Win! Your Hand: ${playerHandSum} Dealer Hand: ${dealerHandSum}`,'green'), 10000);
             return false;
         }
         else if( dealerHandArray.length == 5){
             playerCash = playerCash - 100;
             updateWallet(playerCash);
             console.log('dealer got 5 ]: Dealer wins')
-            setTimeout(popUpMessage(`You lose! Your Hand: ${playerHandSum} Dealer Hand: ${dealerHandSum}`, 'red'), 10000);
+            await setTimeout(popUpMessage(`You lose! Your Hand: ${playerHandSum} Dealer Hand: ${dealerHandSum}`, 'red' ), 10000)//setTimeout(popUpMessage(`You lose! Your Hand: ${playerHandSum} Dealer Hand: ${dealerHandSum}`, 'red'), 10000);
             return false;
             // reset(playerCash);
         }
@@ -347,15 +348,13 @@ function check(){
 
 }
 
-
-
 function returnHome(){
     window.location = 'index.html'
 }
 
 function reset(){
 console.log('--------------new game--------------')
-    popUp.style.display = 'none';
+    popUp.style.display = 'none'; //hides the pop up div.
     hitStayButton('inline-block');
     for(let i = 0; i < allCards.length; i++){
         allCards[i].style.backgroundImage = `url('./img/facedowncard.png')`;
@@ -374,10 +373,6 @@ console.log('--------------new game--------------')
 
 function flip(div, img){
     div.style.backgroundImage = `url('${img}')`;
-}
-
-function sum(handSum, newCard){
-    return handSum += newCard;
 }
 
 function hitStayButton(noneOrInline){
@@ -421,10 +416,10 @@ function hideHomepage(){    //1. This function runs when user clicks start on th
     let homepage = document.querySelector('#home-navigation');
     homepage.style.display = 'none';
     gameContainer.style.display = 'inline-block';
-    onStart();  // 2. This function gets invoked.
+    onStart(); 
 }
 
-
+//The parameters determine the color of the popUp div when the player win's or loses.
 function popUpMessage(message, color){
     popUp.style.display = 'inline-block';
     popUp.style.backgroundColor = color;
